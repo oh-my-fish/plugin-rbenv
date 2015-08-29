@@ -22,6 +22,10 @@ $ omf install rbenv
 
 If you have a custom rbenv root, you can add the following to your `~/.config/fish/init.fish` file before sourcing Oh My Fish.
 
+```
+set -gx RBENV_ROOT #path
+```
+
 # License
 
 [MIT][mit] © [bpinto][author] et [al][contributors]
