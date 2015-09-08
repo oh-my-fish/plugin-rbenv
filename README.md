@@ -26,6 +26,16 @@ If you have a custom rbenv root, you can add the following to your `~/.config/fi
 set -gx RBENV_ROOT #path
 ```
 
+## Prompt util
+
+If you like to easily get current ruby version in you prompt you can use the `rbenv_prompt` function, e.g:
+
+```fish
+function fish_right_prompt
+  rbenv_prompt
+end
+```
+
 # License
 
 [MIT][mit] © [bpinto][author] et [al][contributors]
