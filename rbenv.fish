@@ -7,7 +7,7 @@ function init --on-event init_rbenv
   end
 
   if status --is-interactive
-    if rbenv init - | grep "function"
+    if rbenv init - | grep --quiet "function"
       source (rbenv init - | psub)
     else
       if not set -q RBENV_ROOT
