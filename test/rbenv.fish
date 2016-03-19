@@ -1,1 +1,1 @@
-test available rbenv
+test type -q rbenv
