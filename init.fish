@@ -14,7 +14,9 @@ if type -q rbenv
       set -x RBENV_ROOT "$HOME/.rbenv"
     end
 
-    set PATH "$RBENV_ROOT/shims" $PATH
+    if not contains $RBENV_ROOT/shims $PATH
+      set PATH $RBENV_ROOT/shims $PATH
+    end
   end
 else
   echo "Please install 'rbenv' first, or set \$RBENV_ROOT!"
