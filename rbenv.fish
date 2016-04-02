@@ -6,8 +6,8 @@ function init --on-event init_rbenv
     set PATH $RBENV_ROOT/bin $PATH
   end
 
-  if not type -q rbenv
-    echo "Please install 'rbenv' first, or set \$RBENV_ROOT!"; return 1
+  if not type -f -q rbenv
+    set_color $fish_color_error; echo "Please install 'rbenv' first, or set \$RBENV_ROOT!"; set_color normal; return 1
   end
 
   if command rbenv init - | grep --quiet "function"
