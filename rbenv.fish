@@ -2,7 +2,7 @@
 #   rbenv plugin for oh my fish
 
 function init --on-event init_rbenv
-  if not type -q rbenv; and set -q RBENV_ROOT; and not contains "$RBENV_ROOT/bin" $PATH
+  if not type -f -q rbenv; and set -q RBENV_ROOT; and not contains "$RBENV_ROOT/bin" $PATH
     set PATH $RBENV_ROOT/bin $PATH
   end
 
@@ -37,4 +37,3 @@ function rbenv
     end
   end
 end
-
