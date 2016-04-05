@@ -36,4 +36,10 @@ function rbenv
       command rbenv "$command" $argv
     end
   end
+
+  function rbenv_prompt -d "Print the actual ruby version"
+    set_color 666
+    echo -n "[ruby "(rbenv version | sed -e 's/ .*//')"]"
+  end
+
 end
